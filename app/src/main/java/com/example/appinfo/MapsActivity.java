@@ -1,11 +1,13 @@
 package com.example.appinfo;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -36,19 +38,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+
+        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap = googleMap;
             mMap.setMyLocationEnabled(true);
             float zoomLevel=18.0f;
             final LatLng huancayo = new LatLng(-12.068054821014954, -75.21008371397862);
             mMap.addMarker(new MarkerOptions().position(huancayo).title("Marcar en Huancayo").draggable(true));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(huancayo,zoomLevel));
         }else {
-            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
-
+            finish();
         }
 
 
