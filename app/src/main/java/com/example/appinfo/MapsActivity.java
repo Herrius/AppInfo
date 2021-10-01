@@ -37,18 +37,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private Button enviar;
-    int REQUEST_CODE=200;
-    private TextView txtlatitud,txtlongitud, txtDireccion;
+    int REQUEST_CODE = 200;
+    private TextView txtlatitud, txtlongitud, txtDireccion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        txtlatitud=findViewById(R.id.latitud);
-        txtlongitud=findViewById(R.id.logintud);
-        txtDireccion=findViewById(R.id.direccion);
-        enviar=findViewById(R.id.enviarGPS);
+        txtlatitud = findViewById(R.id.latitud);
+        txtlongitud = findViewById(R.id.logintud);
+        txtDireccion = findViewById(R.id.direccion);
+        enviar = findViewById(R.id.enviarGPS);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -57,11 +58,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.putExtra("latitud",ultimaPosicion.getPosition().latitude);
-                intent.putExtra("longitud",ultimaPosicion.getPosition().longitude);
-                intent.putExtra("direccion",txtDireccion.getText());
-                setResult(Activity.RESULT_OK,intent);
+                Intent intent = new Intent();
+                intent.putExtra("latitud", ultimaPosicion.getPosition().latitude);
+                intent.putExtra("longitud", ultimaPosicion.getPosition().longitude);
+                intent.putExtra("direccion", txtDireccion.getText());
+                setResult(Activity.RESULT_OK, intent);
                 finish();
             }
         });
@@ -71,7 +72,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap = googleMap;
