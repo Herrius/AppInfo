@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_alumbrado_foreground.xml" value="0.2911458333333333" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2911458333333333" />
+        <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.15989583333333332" />
+        <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_image.xml" value="0.15989583333333332" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2911458333333333" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2911458333333333" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/drawable/start_wrap.xml" value="0.2911458333333333" />
@@ -14,6 +16,7 @@
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/layout/activity_maps.xml" value="0.264" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/layout/activity_report.xml" value="0.264" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/layout/activity_user_report.xml" value="0.2463768115942029" />
+        <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/layout/alert_dialog_picture_or_photo.xml" value="0.2" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/mipmap-anydpi-v26/ic_alumbrado.xml" value="0.15989583333333332" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/mipmap-anydpi-v26/ic_alumbrado_round.xml" value="0.15989583333333332" />
         <entry key="..\:/HD/cursos/DesarrolloMovil/AppInfo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15989583333333332" />

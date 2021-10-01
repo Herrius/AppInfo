@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:gravity="top|center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/ic_photo_foreground"
+        android:background="@color/ic_photo_background"
+        android:id="@+id/imageViewCamera"></ImageView>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_image_foreground"
+        android:background="@color/ic_photo_background"
+        android:id="@+id/imageViewGallery"></ImageView>
+
+</LinearLayout>
